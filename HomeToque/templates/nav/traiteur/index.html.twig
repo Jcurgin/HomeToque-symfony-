@@ -1,0 +1,530 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid">
+        <section id="about">
+            <div class="container">
+                <div class="quote">
+                    <p class="line-through"><span>Nos buffets</span></p>
+                    <div class="stripe-border">
+                        <blockquote>
+                            <p>&ldquo;Ici sélectionnez votre buffets vous avez la possibilité de les personnaliser à volonté..&rdquo; </p>
+                        </blockquote>
+                    </div>
+                    <cite class="line-through"><span>Coin traiteur</span></cite>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col-6">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active"  id="effect1" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                        {% for categorie in categories %}
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top" src="" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ categorie.nom }}</h5>
+                                    <p class="card-text">{{ categorie.description }}.</p>
+                                    <div class="price">{{ categorie.prix }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </a>
+                    <a class="nav-link"  id="effect1" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top" src="img/slotcard1.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="price">34,90€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="nav-link"  id="effect1" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top" src="img/card2.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="price">29,90€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="nav-link"  id="effect1" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top" src="img/card3.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="price">24,90€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="nav-link" id="effect1" data-toggle="pill" href="#v-pills-card6" role="tab" aria-controls="v-pills-card6" aria-selected="false">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top" src="img/card4.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="price">24,90€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="nav-link" id="effect1" data-toggle="pill" href="#v-pills-card7" role="tab" aria-controls="v-pills-card7" aria-selected="false">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top" src="img/card5.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="price">24,90€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="tab-content" id="effect1" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card5.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Notre buffets de poissons</h5>
+                                <p class="card-text">Etape 1
+                                    Mixer la mie de pain.
+                                    Etape 2
+                                    Battre légèrement l'oeuf, puis y tremper les filets de poisson. Les égoutter et les recouvrir de mie de pain.
+                                    Etape 3
+                                    Faire chauffer du beurre ou de l'huile dans une poêle et faire
+                                    Etape 4
+                                    revenir les filets 1 mn et demi de chaque côté.
+                                    Note de l'auteur
+                                    On peut aussi utiliser des tranches en laissant cuire 30 secondes de plus. Mais attention, le poisson trop cuit devient sec et filandreux.</p>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="list-group">
+                                            <li class="d-flex justify-content align-items-center text-uppercase">
+                                                <strong class="mr-auto p-2">Nombre de Personnes</strong>
+                                                <i class="fas fa-minus p-2"></i> <span class="badge badge-warning badge-pill p-2">14</span><i class="fas fa-plus p-2"></i>
+                                            </li>
+                                            <br>
+                                            <ul class="list-group">
+                                                <button type="button" class="btn btn-secondary">Ajouter un plat</button>
+                                            </ul>
+                                        </ul>
+                                        <br>
+                                        <div class="list-group">
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Entrée</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio <button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Plat</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Dessert</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Notre buffets de poissons</h5>
+                                <p class="card-text">Etape 1
+                                    Mixer la mie de pain.
+                                    Etape 2
+                                    Battre légèrement l'oeuf, puis y tremper les filets de poisson. Les égoutter et les recouvrir de mie de pain.
+                                    Etape 3
+                                    Faire chauffer du beurre ou de l'huile dans une poêle et faire
+                                    Etape 4
+                                    revenir les filets 1 mn et demi de chaque côté.
+                                    Note de l'auteur
+                                    On peut aussi utiliser des tranches en laissant cuire 30 secondes de plus. Mais attention, le poisson trop cuit devient sec et filandreux.</p>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="list-group">
+                                            <li class="d-flex justify-content align-items-center text-uppercase">
+                                                <strong class="mr-auto p-2">Nombre de Personnes</strong>
+                                                <i class="fas fa-minus p-2"></i> <span class="badge badge-warning badge-pill p-2">14</span><i class="fas fa-plus p-2"></i>
+                                            </li>
+                                            <br>
+                                            <ul class="list-group">
+                                                <button type="button" class="btn btn-secondary">Ajouter un plat</button>
+                                            </ul>
+                                        </ul>
+                                        <br>
+                                        <div class="list-group">
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Entrée</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio <button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Plat</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Dessert</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Notre buffets de poissons</h5>
+                                <p class="card-text">Etape 1
+                                    Mixer la mie de pain.
+                                    Etape 2
+                                    Battre légèrement l'oeuf, puis y tremper les filets de poisson. Les égoutter et les recouvrir de mie de pain.
+                                    Etape 3
+                                    Faire chauffer du beurre ou de l'huile dans une poêle et faire
+                                    Etape 4
+                                    revenir les filets 1 mn et demi de chaque côté.
+                                    Note de l'auteur
+                                    On peut aussi utiliser des tranches en laissant cuire 30 secondes de plus. Mais attention, le poisson trop cuit devient sec et filandreux.</p>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="list-group">
+                                            <li class="d-flex justify-content align-items-center text-uppercase">
+                                                <strong class="mr-auto p-2">Nombre de Personnes</strong>
+                                                <i class="fas fa-minus p-2"></i> <span class="badge badge-warning badge-pill p-2">14</span><i class="fas fa-plus p-2"></i>
+                                            </li>
+                                            <br>
+                                            <ul class="list-group">
+                                                <button type="button" class="btn btn-secondary">Ajouter un plat</button>
+                                            </ul>
+                                        </ul>
+                                        <br>
+                                        <div class="list-group">
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Entrée</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio <button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Plat</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Dessert</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card3.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Notre buffets de poissons</h5>
+                                <p class="card-text">Etape 1
+                                    Mixer la mie de pain.
+                                    Etape 2
+                                    Battre légèrement l'oeuf, puis y tremper les filets de poisson. Les égoutter et les recouvrir de mie de pain.
+                                    Etape 3
+                                    Faire chauffer du beurre ou de l'huile dans une poêle et faire
+                                    Etape 4
+                                    revenir les filets 1 mn et demi de chaque côté.
+                                    Note de l'auteur
+                                    On peut aussi utiliser des tranches en laissant cuire 30 secondes de plus. Mais attention, le poisson trop cuit devient sec et filandreux.</p>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="list-group">
+                                            <li class="d-flex justify-content align-items-center text-uppercase">
+                                                <strong class="mr-auto p-2">Nombre de Personnes</strong>
+                                                <i class="fas fa-minus p-2"></i> <span class="badge badge-warning badge-pill p-2">14</span><i class="fas fa-plus p-2"></i>
+                                            </li>
+                                            <br>
+                                            <ul class="list-group">
+                                                <button type="button" class="btn btn-secondary">Ajouter un plat</button>
+                                            </ul>
+                                        </ul>
+                                        <br>
+                                        <div class="list-group">
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Entrée</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio <button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Plat</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Dessert</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-card6" role="tabpanel" aria-labelledby="v-pills-card6-tab">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card4.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Notre buffets de poissons</h5>
+                                <p class="card-text">Etape 1
+                                    Mixer la mie de pain.
+                                    Etape 2
+                                    Battre légèrement l'oeuf, puis y tremper les filets de poisson. Les égoutter et les recouvrir de mie de pain.
+                                    Etape 3
+                                    Faire chauffer du beurre ou de l'huile dans une poêle et faire
+                                    Etape 4
+                                    revenir les filets 1 mn et demi de chaque côté.
+                                    Note de l'auteur
+                                    On peut aussi utiliser des tranches en laissant cuire 30 secondes de plus. Mais attention, le poisson trop cuit devient sec et filandreux.</p>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="list-group">
+                                            <li class="d-flex justify-content align-items-center text-uppercase">
+                                                <strong class="mr-auto p-2">Nombre de Personnes</strong>
+                                                <i class="fas fa-minus p-2"></i> <span class="badge badge-warning badge-pill p-2">14</span><i class="fas fa-plus p-2"></i>
+                                            </li>
+                                            <br>
+                                            <ul class="list-group">
+                                                <button type="button" class="btn btn-secondary">Ajouter un plat</button>
+                                            </ul>
+                                        </ul>
+                                        <br>
+                                        <div class="list-group">
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Entrée</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio <button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Plat</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Dessert</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-card7" role="tabpanel" aria-labelledby="v-pills-card7-tab">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card5.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Notre buffets de poissons</h5>
+                                <p class="card-text">Etape 1
+                                    Mixer la mie de pain.
+                                    Etape 2
+                                    Battre légèrement l'oeuf, puis y tremper les filets de poisson. Les égoutter et les recouvrir de mie de pain.
+                                    Etape 3
+                                    Faire chauffer du beurre ou de l'huile dans une poêle et faire
+                                    Etape 4
+                                    revenir les filets 1 mn et demi de chaque côté.
+                                    Note de l'auteur
+                                    On peut aussi utiliser des tranches en laissant cuire 30 secondes de plus. Mais attention, le poisson trop cuit devient sec et filandreux.</p>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="list-group">
+                                            <li class="d-flex justify-content align-items-center text-uppercase">
+                                                <strong class="mr-auto p-2">Nombre de Personnes</strong>
+                                                <i class="fas fa-minus p-2"></i> <span class="badge badge-warning badge-pill p-2">14</span><i class="fas fa-plus p-2"></i>
+                                            </li>
+                                            <br>
+                                            <ul class="list-group">
+                                                <button type="button" class="btn btn-secondary">Ajouter un plat</button>
+                                            </ul>
+                                        </ul>
+                                        <br>
+                                        <div class="list-group">
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Entrée</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio <button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Plat</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Dessert</h5>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Cras justo odio<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-cente">Dapibus ac facilisis in<button type="button" class="btn btn-secondary">Modifier</button></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
